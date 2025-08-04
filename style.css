@@ -1,0 +1,315 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    color: #4a4a4a;
+    background: linear-gradient(135deg, #fdf7f7 0%, #f9f1f1 50%, #f5ebe8 100%);
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+}
+
+.flower-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #d4526e;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(212, 82, 110, 0.1);
+}
+
+.flower-subtitle {
+    font-size: 1.1rem;
+    color: #8a8a8a;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Image Section */
+.flower-image-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(212, 82, 110, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(212, 82, 110, 0.2);
+}
+
+.flower-image {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Section Styles */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #d4526e;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #d4526e, #f4a6b7);
+    border-radius: 2px;
+}
+
+/* Description Section */
+.description-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(212, 82, 110, 0.1);
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+/* Benefits Section */
+.benefits-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(212, 82, 110, 0.1);
+}
+
+.benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.benefit-item {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #fdf9f9 0%, #f9f3f3 100%);
+    border-radius: 12px;
+    border-left: 4px solid #d4526e;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-item::before {
+    content: '•';
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #d4526e;
+    border-radius: 50%;
+    font-size: 0;
+}
+
+.benefit-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 20px rgba(212, 82, 110, 0.15);
+    background: linear-gradient(135deg, #fefcfc 0%, #faf5f5 100%);
+}
+
+.benefit-item strong {
+    color: #d4526e;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+/* Care Section */
+.care-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(212, 82, 110, 0.1);
+}
+
+.care-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.care-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #fdf9f9 0%, #f9f3f3 100%);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 82, 110, 0.1);
+}
+
+.care-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 82, 110, 0.12);
+    background: linear-gradient(135deg, #fefcfc 0%, #faf5f5 100%);
+}
+
+.step-number {
+    background: linear-gradient(135deg, #d4526e, #f4a6b7);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(212, 82, 110, 0.3);
+}
+
+.step-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #d4526e;
+    margin-bottom: 0.5rem;
+}
+
+.step-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(212, 82, 110, 0.1);
+}
+
+.footer p {
+    color: #8a8a8a;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+    
+    .flower-title {
+        font-size: 2.5rem;
+    }
+    
+    .flower-image {
+        height: 280px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .description-section,
+    .benefits-section,
+    .care-section {
+        padding: 2rem;
+    }
+    
+    .care-step {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .main-content {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .flower-title {
+        font-size: 2rem;
+    }
+    
+    .flower-image {
+        height: 250px;
+    }
+    
+    .description-section,
+    .benefits-section,
+    .care-section {
+        padding: 1.5rem;
+    }
+    
+    .benefit-item,
+    .care-step {
+        padding: 1.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+    background: rgba(212, 82, 110, 0.2);
+    color: #d4526e;
+}
